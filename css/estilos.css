@@ -1,20 +1,52 @@
+:root{
+    /* variables de colores de la pagina */
+    --background-color: #333;
+    --sidebar-color: #FFFFFF;
+    --primary-color: #538fdc;
+    --primary-color-light: #9B27B00D;
+    --toggle-color: #78788c;
+    --text-color: #d6d6e6;
+
+    /* animaciones de transicion */
+    --tran-03: all 0.2s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.4s ease;
+    --altura: 5vh;
+}
+
 header {
     position: fixed;
-    width: 100%;
+    width: 100dvh;
     top: 0;
     left: 0;
     z-index: 100; /* Asegura que esté por encima del contenido */
 
-    height: 100%; /* Altura inicial */
-    transition: all 0.2s ease;
+    height: 100dvh; /* Altura inicial */
+    transition: var(--tran-05);
 
-    background-color: #333;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     padding: 20px;
 }
 
 /* cuando el header es insertado la clase "sticky" adquiere estos estilos */
 header.sticky{
-    height: 10%;
-    transition: all 0.2s ease;
+    height: 5dvh;
+    transition: var(--tran-05);
+}
+
+section{
+    top: 5dvh;
+    left: 0;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 50; /*por encima del contenido y por debajo del header*/
+
+    background-color: #333;
+    color: var(--text-color);
 }
