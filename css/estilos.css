@@ -1,3 +1,20 @@
-body{
-    
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100; /* Asegura que esté por encima del contenido */
+
+    height: 100%; /* Altura inicial */
+    transition: all 0.2s ease;
+
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* cuando el header es insertado la clase "sticky" adquiere estos estilos */
+header.sticky{
+    height: 10%;
+    transition: all 0.2s ease;
 }
